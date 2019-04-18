@@ -1,0 +1,31 @@
+# -*- mode: Makefile -*-
+
+TRANSPORT_CFLAGS	=	-DUSE_TCPIP
+TRANSPORT_LDFLAGS	=	# nothing
+
+WORKERPID		=	workerpid
+PIDEXIST 		= 	*pid
+PSRVLOG 		= 	parmipopt.srvlog
+
+parmipopt-port0          = 	9527
+parmipopt-port1          = 	9528
+
+run: $(CPLEXBINDIR)/$(dllpref)parmipopt_userfunction$(dllsuff)
+ifeq ($(WORKERPID),$(wildcard $(PIDEXIST)))
+	# workerpid is exist, please make clean!
+else
+	# Start the worker process and store its PID in file $(WORKERPID)
+	rm -f $(WORKERPID)
+	$(LDLIBPATH)=$$$(LDLIBPATH):$(CPLEXBINDIR) \
+	$(WORKER) -worker=tcpip $(parmipopt-userfunction) \
+		-address=192.168.1.79:$(parmipopt-port1) \
+		-logfile=parmipopt.srvlog -pidfile=$(WORKERPID)	&
+	# Wait for connecting to the master...
+	sleep 2
+	ps -p `cat $(WORKERPID)`
+endif
+
+clean:
+	kill `cat $(WORKERPID)`
+	rm $(WORKERPID) $(PSRVLOG)
+

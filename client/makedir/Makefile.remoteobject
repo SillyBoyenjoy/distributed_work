@@ -1,0 +1,24 @@
+# -*- mode: Makefile -*-
+
+VERSION	=	worker.c
+
+.PHONY: remote-build remote-run remote-clean remote-run-mpi remote-run
+
+remote-clean:
+	rm -rf $(TRANSPORT)
+
+$(CPLEXOBJDIR)/parmipopt_userfunction$O: $(SRCC)/$(VERSION)
+	mkdir -p obj
+	$(CC) $(CFLAGS) $(TRANSPORT_CFLAGS) -DCOMPILE_USERFUNCTION -c \
+		-o $@ $(SRCC)/$(VERSION)
+
+$(CPLEXBINDIR)/$(dllpref)parmipopt_userfunction$(dllsuff): $(CPLEXOBJDIR)/parmipopt_userfunction$O
+	$(CC) -o $@ $(CPLEXOBJDIR)/parmipopt_userfunction$O \
+		$(TRANSPORT_LDFLAGS) $(DLLFLAGS)
+
+parmipopt-args          = -model=$(CPLEXDATADIR)/location.lp
+parmipopt-userfunction  = -userfunction=parmipopt_userfunction=REGISTER_USERFUNCTION
+
+# Absolute path to worker.
+WORKER = ./bin/cplex$E
+
