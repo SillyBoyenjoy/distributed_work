@@ -1,0 +1,3 @@
+Modelfile is ./data/1819000223-SCUC-con-1.lp
+Branch&Cut: on.
+Creating env on -address=192.168.1.73:9528

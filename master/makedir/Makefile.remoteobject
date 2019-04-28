@@ -1,0 +1,35 @@
+# -*- mode: Makefile -*-
+VERSION 	= 		master.c
+CMDSRC 		= 		keyboard.c
+
+.PHONY: remote-build remote-run remote-clean remote-run-mpi remote-run
+
+remote-clean:
+	rm -rf $(TRANSPORT)
+
+$(CPLEXOBJDIR)/keyboard$O: $(SRCC2)/$(CMDSRC)
+	mkdir -p obj
+	$(CC) $(CFLAGS) -c -o $@ $(SRCC2)/$(CMDSRC) -g
+
+$(CPLEXOBJDIR)/parmipopt_master$O: $(SRCC1)/$(VERSION)
+	mkdir -p obj
+	$(CC) $(CFLAGS) $(TRANSPORT_CFLAGS) -DCOMPILE_MASTER -c \
+		-o $@ $(SRCC1)/$(VERSION) -g
+
+$(CPLEXBINDIR)/parmipopt_master$E: $(CPLEXOBJDIR)/parmipopt_master$O \
+								   $(CPLEXOBJDIR)/keyboard$O
+	$(CC) $(CFLAGS) $(CLNDIRS) -o $@ $(CPLEXOBJDIR)/parmipopt_master$O \
+		$(CPLEXOBJDIR)/keyboard$O \
+		-L$(CPLEXBINDIR) -lcplex1290remote \
+		$(CLNFLAGS) $(TRANSPORT_LDFLAGS) \
+		$(RDYNAMIC)
+
+
+parmipopt-userfunction  = -userfunction=parmipopt_userfunction=REGISTER_USERFUNCTION
+
+
+# ###################################################################### #
+
+# Absolute path to worker.
+WORKER = ./bin/cplex$E
+
