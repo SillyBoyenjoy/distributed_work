@@ -31,4 +31,4 @@ run: $(CPLEXBINDIR)/parmipopt_master$E
 	$(LDLIBPATH)=$$$(LDLIBPATH):$(CPLEXBINDIR) \
 	$(CPLEXBINDIR)/parmipopt_master$E $(parmipopt-transport-args) \
 	$(parmipopt-args)
-	rm $(CPLEXDATADIR)/*.g
+	rm $(CPLEXDATADIR)/*.gz
