@@ -6,26 +6,25 @@ TRANSPORT_LDFLAGS	=	# nothing
 WORKERPID		=	workerpid
 BESTPRI		 	= 	$(CPLEXDATADIR)/BestPrimal.gz
 BESTDUAL 		= 	$(CPLEXDATADIR)/BestDual.gz
-GZEXIST 			= 	$(CPLEXDATADIR)/*.gz
+GZEXIST 		= 	$(CPLEXDATADIR)/*.gz
 
-parmipopt-args 			 = -model=./data/1819000223-SCUC-con-1.lp \
-						   -iteration=off \
-						   -cut=on \
-						   -polish=off \
-						   #-warmstart=./sol/startfile.gz \
+parmipopt-args 		= 	-model=$(CPLEXDATADIR)/1819000223-SCUC-con-1.lp \
+				-iteration=off \
+				-cut=on \
+				-polish=off \
+				#-warmstart=./sol/startfile.gz \
 
-parmipopt-port0           = 9525
-parmipopt-port1           = 9526
-parmipopt-port3           = 9527
-parmipopt-port2 		  = 9528
+parmipopt-port0         = 	9525
+parmipopt-port1         = 	9526
+parmipopt-port3         = 	9527
+parmipopt-port2 	= 	9528
 
-parmipopt-transport-args = -address=192.168.1.73:$(parmipopt-port2) \
-						   -address=192.168.1.73:$(parmipopt-port2) \
-						   -address=192.168.1.79:$(parmipopt-port2) \
-						   -address=192.168.1.79:$(parmipopt-port2) \
-						   
- 						   #-address=127.0.0.1:$(parmipopt-port0) \
-                           -address=127.0.0.1:$(parmipopt-port0) \
+parmipopt-transport-args = 	-address=192.168.1.73:$(parmipopt-port2) \
+				-address=192.168.1.73:$(parmipopt-port2) \
+				-address=192.168.1.79:$(parmipopt-port2) \
+				-address=192.168.1.79:$(parmipopt-port2) \
+				#-address=127.0.0.1:$(parmipopt-port0) \
+                           	-address=127.0.0.1:$(parmipopt-port0) \
 
 
 run: $(CPLEXBINDIR)/parmipopt_master$E
