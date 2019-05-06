@@ -1,0 +1,97 @@
+Modelfile is ./data/1819000223-SCUC-con-1.lp
+Iteration: on.
+Creating env on -address=192.168.1.79:9528
+Creating env on -address=192.168.1.73:9528
+Creating env on -address=192.168.1.73:9528
+Creating env on -address=192.168.1.73:9528
+Creating env on -address=192.168.1.73:9528
+Reading and broadcasting the model.
+Setting the params.
+Solving...
+l bound: 6.190433e+11
+[0] Bound updated: (6.190433e+11, 1.797693e+308), gap: inf%.
+The clock time is 20.244264 sec.
+[3] New dual bound: 6.190433e+11
+The clock time is 22.117698 sec.
+[2] New dual bound: 6.190433e+11
+The clock time is 22.192690 sec.
+[4] New dual bound: 6.190433e+11
+The clock time is 22.383751 sec.
+[1] New dual bound: 6.190433e+11
+The clock time is 22.440218 sec.
+[4] New dual bound: 6.294437e+11
+[4] Bound updated: (6.294437e+11, 1.797693e+308), gap: inf%.
+The clock time is 164.724591 sec.
+[1] New dual bound: 6.294437e+11
+[1] Bound updated: (6.294437e+11, 1.797693e+308), gap: inf%.
+The clock time is 176.000803 sec.
+[3] New dual bound: 6.294437e+11
+[3] Bound updated: (6.294437e+11, 1.797693e+308), gap: inf%.
+The clock time is 180.257270 sec.
+[0] New dual bound: 6.294437e+11
+The clock time is 182.339568 sec.
+[2] New dual bound: 6.294437e+11
+The clock time is 211.798791 sec.
+[4] New primal bound: 9.724269e+11
+[4] Bound updated: (6.294437e+11, 9.724269e+11), gap: 35.27%.
+The clock time is 219.767289 sec.
+[3] New primal bound: 9.728828e+11
+The clock time is 242.598348 sec.
+[2] New primal bound: 8.351123e+11
+[2] Bound updated: (6.294437e+11, 8.351123e+11), gap: 24.63%.
+The clock time is 268.201840 sec.
+[1] New primal bound: 2.653250e+12
+The clock time is 288.038851 sec.
+[0] New dual bound: 6.294484e+11
+[0] Bound updated: (6.294484e+11, 8.351123e+11), gap: 24.63%.
+The clock time is 295.535160 sec.
+[4] New dual bound: 6.294437e+11
+The clock time is 325.145238 sec.
+[4] New dual bound: 6.294480e+11
+The clock time is 325.467441 sec.
+[3] New primal bound: 7.184676e+11
+[3] Bound updated: (6.294484e+11, 7.184676e+11), gap: 12.39%.
+The clock time is 357.975883 sec.
+[3] New dual bound: 6.294441e+11
+The clock time is 357.975950 sec.
+[3] New dual bound: 6.294483e+11
+The clock time is 358.253226 sec.
+[2] New dual bound: 6.294437e+11
+The clock time is 363.923912 sec.
+[2] New dual bound: 6.294480e+11
+The clock time is 364.225003 sec.
+[4] New primal bound: 6.866345e+11
+[4] Bound updated: (6.294484e+11, 6.866345e+11), gap: 8.33%.
+The clock time is 393.725485 sec.
+[4] New dual bound: 6.294497e+11
+[4] Bound updated: (6.294497e+11, 6.866345e+11), gap: 8.33%.
+The clock time is 393.927924 sec.
+[1] New primal bound: 7.196852e+11
+The clock time is 396.642444 sec.
+[1] New dual bound: 6.294437e+11
+The clock time is 396.644422 sec.
+[1] New dual bound: 6.294480e+11
+The clock time is 396.910262 sec.
+[3] New dual bound: 6.294497e+11
+The clock time is 427.880948 sec.
+[2] New primal bound: 6.552776e+11
+[2] Bound updated: (6.294497e+11, 6.552776e+11), gap: 3.94%.
+The clock time is 431.642985 sec.
+[2] New dual bound: 6.294497e+11
+The clock time is 432.094749 sec.
+[4] New primal bound: 6.453791e+11
+[4] Bound updated: (6.294497e+11, 6.453791e+11), gap: 2.47%.
+The clock time is 460.976229 sec.
+[4] New dual bound: 6.294503e+11
+[4] Bound updated: (6.294503e+11, 6.453791e+11), gap: 2.47%.
+The clock time is 461.276056 sec.
+[1] New primal bound: 6.451499e+11
+[1] Bound updated: (6.294503e+11, 6.451499e+11), gap: 2.43%.
+The clock time is 469.403406 sec.
+[1] New dual bound: 6.294495e+11
+The clock time is 469.596786 sec.
+[3] New primal bound: 6.349149e+11
+[3] Bound updated: (6.294503e+11, 6.349149e+11), gap: 0.86%.
+The clock time is 480.433765 sec.
+The clock time is 480.449584 sec.
+he clock time is 484.475269 sec.
