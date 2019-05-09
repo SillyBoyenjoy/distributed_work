@@ -2,11 +2,3 @@ Modelfile is ./data/1819000223-SCUC-con-2.lp
 Branch&Cut: on.
 Creating env on -address=192.168.1.73:9525
 Creating env on -address=192.168.1.73:9527
-Reading and broadcasting the model.
-Setting the params.
-Solving...
-l bound: 6.190433e+11
-[0] Bound updated: (6.190433e+11, 1.797693e+308), gap: inf%.
-The clock time is 33.308041 sec.
-[1] New dual bound: 6.190433e+11
-The clock time is 45.441938 sec.
