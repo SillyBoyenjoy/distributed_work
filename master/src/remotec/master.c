@@ -851,10 +851,10 @@ main(int argc, char **argv){
         }
     }
 
+    int solstat;
     i = BestPrimals[0].idx;
     if ( (status = CPXXsolwrite( env[i], lp[i], "./sol/bestsol.sol" )) != 0 ){
-		fprintf (stderr, "CPXXsolwrite: %d\n", status);
-		abort ();
+		fprintf (stderr, "Not sol can be written: %d\n", status);
 	}
 
     CPXXfreeenvgroup (&group);

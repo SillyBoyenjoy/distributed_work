@@ -36,8 +36,12 @@ E		=
 
 TRANSPORT	=	tcpip
 
-# Include other Makefiles
+parmipopt-port0          = 	-1
+parmipopt-port1          = 	-1
+parmipopt-port2          = 	-1
+parmipopt-port3          = 	-1
 
+# Include other Makefiles
 include $(CPLEXMAKEDIR)/Makefile.remoteobject
 include $(CPLEXMAKEDIR)/Makefile.$(TRANSPORT)
 # Local Variables:

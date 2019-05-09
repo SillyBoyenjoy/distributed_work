@@ -3,29 +3,77 @@
 TRANSPORT_CFLAGS	=	-DUSE_TCPIP
 TRANSPORT_LDFLAGS	=	# nothing
 
-WORKERPID		=	workerpid
-PIDEXIST 		= 	*pid
-PSRVLOG 		= 	parmipopt.srvlog
+WORKERPID 		= 	workerpid
+WORKERPID0		=	workerpid0
+WORKERPID1		=	workerpid1
+WORKERPID2		=	workerpid2
+WORKERPID3		=	workerpid3
+PIDEXIST 		= 	*pid*
+PSRVLOG 		= 	parmipopt
 
-parmipopt-port0          = 	9527
-parmipopt-port1          = 	9528
+
+parmipopt-port0          = 	9525
+#parmipopt-port1          = 	9526
+parmipopt-port2          = 	9527
+#parmipopt-port3          = 	9528
+
 
 run: $(CPLEXBINDIR)/$(dllpref)parmipopt_userfunction$(dllsuff)
-ifeq ($(WORKERPID),$(wildcard $(PIDEXIST)))
+ifeq ($(WORKERPID0),$(wildcard $(PIDEXIST)))
 	# workerpid is exist, please make clean!
 else
 	# Start the worker process and store its PID in file $(WORKERPID)
-	rm -f $(WORKERPID)
+	rm -f $(WORKERPID)*
+ifneq ($(parmipopt-port0),-1)
 	$(LDLIBPATH)=$$$(LDLIBPATH):$(CPLEXBINDIR) \
 	$(WORKER) -worker=tcpip $(parmipopt-userfunction) \
-		-address=10.0.2.15:$(parmipopt-port1) \
-		-logfile=parmipopt.srvlog -pidfile=$(WORKERPID)	&
-	# Wait for connecting to the master...
+		-address=192.168.1.73:$(parmipopt-port0) \
+		-logfile=parmipopt0.srvlog -pidfile=$(WORKERPID0)	&
+	# Wait for port 9525...
 	sleep 2
-	ps -p `cat $(WORKERPID)`
+	ps -p `cat $(WORKERPID0)`
+endif
+ifneq ($(parmipopt-port1),-1)
+	$(LDLIBPATH)=$$$(LDLIBPATH):$(CPLEXBINDIR) \
+	$(WORKER) -worker=tcpip $(parmipopt-userfunction) \
+		-address=192.168.1.73:$(parmipopt-port1) \
+		-logfile=parmipopt1.srvlog -pidfile=$(WORKERPID1)	&
+	# Wait for port 9526...
+	sleep 2
+	ps -p `cat $(WORKERPID1)`
+endif
+ifneq ($(parmipopt-port2),-1)
+	$(LDLIBPATH)=$$$(LDLIBPATH):$(CPLEXBINDIR) \
+	$(WORKER) -worker=tcpip $(parmipopt-userfunction) \
+		-address=192.168.1.73:$(parmipopt-port2) \
+		-logfile=parmipopt2.srvlog -pidfile=$(WORKERPID2)	&
+	# Wait for port 9527...
+	sleep 2
+	ps -p `cat $(WORKERPID2)`
+endif
+ifneq ($(parmipopt-port3),-1)
+	$(LDLIBPATH)=$$$(LDLIBPATH):$(CPLEXBINDIR) \
+	$(WORKER) -worker=tcpip $(parmipopt-userfunction) \
+		-address=192.168.1.73:$(parmipopt-port3) \
+		-logfile=parmipopt3.srvlog -pidfile=$(WORKERPID3)	&
+	# Wait for port 9528...
+	sleep 2
+	ps -p `cat $(WORKERPID3)`
+endif
 endif
 
 clean:
-	kill `cat $(WORKERPID)`
-	rm $(WORKERPID) $(PSRVLOG)
+ifneq ($(parmipopt-port0),-1)
+	kill `cat $(WORKERPID0)`
+endif
+ifneq ($(parmipopt-port1),-1)
+	kill `cat $(WORKERPID1)`
+endif
+ifneq ($(parmipopt-port2),-1)
+	kill `cat $(WORKERPID2)`
+endif
+ifneq ($(parmipopt-port3),-1)
+	kill `cat $(WORKERPID3)`
+endif
+	rm $(WORKERPID)* $(PSRVLOG)*
 

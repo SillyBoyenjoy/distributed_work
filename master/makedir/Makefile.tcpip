@@ -8,7 +8,7 @@ BESTPRI		 	= 	$(CPLEXDATADIR)/BestPrimal.gz
 BESTDUAL 		= 	$(CPLEXDATADIR)/BestDual.gz
 GZEXIST 			= 	$(CPLEXDATADIR)/*.gz
 
-parmipopt-args 			 = -model=./data/1819000223-SCUC-con-1.lp \
+parmipopt-args 			 = -model=$(CPLEXDATADIR)/1819000223-SCUC-con-2.lp \
 						   -iteration=off \
 						   -cut=on \
 						   -polish=off \
@@ -19,17 +19,16 @@ parmipopt-port1           = 9526
 parmipopt-port3           = 9527
 parmipopt-port2 		  = 9528
 
-parmipopt-transport-args = -address=192.168.1.73:$(parmipopt-port2) \
+parmipopt-transport-args = -address=192.168.1.73:$(parmipopt-port0) \
+						   -address=192.168.1.73:$(parmipopt-port1) \
 						   -address=192.168.1.73:$(parmipopt-port2) \
-						   -address=192.168.1.79:$(parmipopt-port2) \
-						   -address=192.168.1.79:$(parmipopt-port2) \
-						   
- 						   #-address=127.0.0.1:$(parmipopt-port0) \
-                           -address=127.0.0.1:$(parmipopt-port0) \
+						   -address=192.168.1.73:$(parmipopt-port3) \
+						   -address=192.168.1.79:$(parmipopt-port0) \
+						   -address=192.168.1.79:$(parmipopt-port1) \
 
 
 run: $(CPLEXBINDIR)/parmipopt_master$E
 	$(LDLIBPATH)=$$$(LDLIBPATH):$(CPLEXBINDIR) \
 	$(CPLEXBINDIR)/parmipopt_master$E $(parmipopt-transport-args) \
 	$(parmipopt-args)
-	rm $(CPLEXDATADIR)/*.g
+	rm $(CPLEXDATADIR)/*.gz
