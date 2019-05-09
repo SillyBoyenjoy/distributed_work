@@ -1,0 +1,200 @@
+Creating env on -address=192.168.1.79:9529
+Creating LP 0
+Creating env on -address=192.168.1.79:9529
+Creating LP 1
+Creating env on -address=192.168.1.79:9529
+Creating LP 2
+Creating env on -address=192.168.1.79:9529
+Creating LP 3
+Reading and broadcasting the model.
+Setting the threads.
+Solving 0
+Solving 1
+Solving 2
+Solving 3
+imal bound: 2.157506e+14
+[0] Bound updated: (0.000000e+00, 2.157506e+14), gap: 100.00%.
+The clock time is 21.272156 sec.
+[0] New dual bound: 7.884962e+11
+[0] Bound updated: (7.884962e+11, 2.157506e+14), gap: 99.63%.
+The clock time is 21.272340 sec.
+[2] New primal bound: 2.010740e+14
+[2] Bound updated: (7.884962e+11, 2.010740e+14), gap: 99.61%.
+The clock time is 21.275060 sec.
+[2] New dual bound: 7.884962e+11
+The clock time is 21.275102 sec.
+[1] New primal bound: 2.009854e+14
+[1] Bound updated: (7.884962e+11, 2.009854e+14), gap: 99.61%.
+The clock time is 21.290449 sec.
+[1] New dual bound: 7.884962e+11
+The clock time is 21.290491 sec.
+[3] New primal bound: 2.009328e+14
+[3] Bound updated: (7.884962e+11, 2.009328e+14), gap: 99.61%.
+The clock time is 21.523023 sec.
+[3] New dual bound: 7.884962e+11
+The clock time is 21.524071 sec.
+[2] New primal bound: 3.304888e+12
+[2] Bound updated: (7.884962e+11, 3.304888e+12), gap: 76.14%.
+The clock time is 31.190456 sec.
+[2] New dual bound: 7.884962e+11
+[2] Bound updated: (7.884962e+11, 3.304888e+12), gap: 76.14%.
+The clock time is 31.190513 sec.
+[3] New primal bound: 4.628332e+12
+The clock time is 31.838600 sec.
+[3] New dual bound: 7.884962e+11
+The clock time is 31.838646 sec.
+[1] New primal bound: 3.501175e+12
+The clock time is 32.185054 sec.
+[1] New dual bound: 7.884962e+11
+The clock time is 32.185101 sec.
+[0] New primal bound: 4.472631e+12
+The clock time is 32.524346 sec.
+[0] New dual bound: 7.884962e+11
+The clock time is 32.524412 sec.
+[2] New dual bound: 1.531012e+12
+[2] Bound updated: (1.531012e+12, 3.304888e+12), gap: 53.67%.
+The clock time is 106.569341 sec.
+[3] New dual bound: 1.531012e+12
+[3] Bound updated: (1.531012e+12, 3.304888e+12), gap: 53.67%.
+The clock time is 116.406004 sec.
+[1] New dual bound: 1.531012e+12
+The clock time is 120.641048 sec.
+[2] New primal bound: 1.903075e+12
+[2] Bound updated: (1.531012e+12, 1.903075e+12), gap: 19.55%.
+The clock time is 130.448807 sec.
+[3] New primal bound: 2.189633e+12
+The clock time is 137.444999 sec.
+[0] New dual bound: 1.531012e+12
+The clock time is 150.517165 sec.
+[1] New primal bound: 2.538479e+12
+The clock time is 154.959649 sec.
+[2] New dual bound: 1.533956e+12
+[2] Bound updated: (1.533956e+12, 1.903075e+12), gap: 19.40%.
+The clock time is 214.912781 sec.
+[2] New dual bound: 1.558285e+12
+[2] Bound updated: (1.558285e+12, 1.903075e+12), gap: 18.12%.
+The clock time is 215.359413 sec.
+[3] New dual bound: 1.557938e+12
+The clock time is 218.974486 sec.
+[1] New dual bound: 1.533956e+12
+The clock time is 221.606409 sec.
+[1] New dual bound: 1.557959e+12
+The clock time is 222.113102 sec.
+[0] New dual bound: 1.557957e+12
+The clock time is 240.822495 sec.
+[1] New primal bound: 1.944555e+12
+The clock time is 256.046064 sec.
+[3] New primal bound: 2.132513e+12
+The clock time is 291.402972 sec.
+[3] New dual bound: 1.562213e+12
+[3] Bound updated: (1.562213e+12, 1.903075e+12), gap: 17.91%.
+The clock time is 291.561589 sec.
+[1] New dual bound: 1.563282e+12
+[1] Bound updated: (1.563282e+12, 1.903075e+12), gap: 17.85%.
+The clock time is 332.525529 sec.
+[0] New primal bound: 2.687834e+12
+The clock time is 354.549329 sec.
+[0] New dual bound: 1.563495e+12
+[0] Bound updated: (1.563495e+12, 1.903075e+12), gap: 17.84%.
+The clock time is 354.834589 sec.
+[2] New primal bound: 1.713361e+12
+[2] Bound updated: (1.563495e+12, 1.713361e+12), gap: 8.75%.
+The clock time is 359.805575 sec.
+[2] New dual bound: 1.563363e+12
+The clock time is 360.168356 sec.
+[3] New dual bound: 1.564380e+12
+[3] Bound updated: (1.564380e+12, 1.713361e+12), gap: 8.70%.
+The clock time is 371.322012 sec.
+[3] New primal bound: 1.802490e+12
+The clock time is 408.226626 sec.
+[1] New dual bound: 1.563797e+12
+The clock time is 429.195048 sec.
+[2] New dual bound: 1.563756e+12
+The clock time is 434.687658 sec.
+[0] New primal bound: 1.631027e+12
+[0] Bound updated: (1.564380e+12, 1.631027e+12), gap: 4.09%.
+The clock time is 453.999438 sec.
+[0] New dual bound: 1.564439e+12
+[0] Bound updated: (1.564439e+12, 1.631027e+12), gap: 4.08%.
+The clock time is 454.210409 sec.
+[3] New primal bound: 1.730031e+12
+The clock time is 457.231787 sec.
+[3] New dual bound: 1.564413e+12
+The clock time is 457.437863 sec.
+[0] New primal bound: 1.599413e+12
+[0] Bound updated: (1.564439e+12, 1.599413e+12), gap: 2.19%.
+The clock time is 485.067406 sec.
+[1] New dual bound: 1.563815e+12
+The clock time is 517.641451 sec.
+[3] New dual bound: 1.564634e+12
+[3] Bound updated: (1.564634e+12, 1.599413e+12), gap: 2.17%.
+The clock time is 521.659535 sec.
+[0] New dual bound: 1.564899e+12
+[0] Bound updated: (1.564899e+12, 1.599413e+12), gap: 2.16%.
+The clock time is 527.671127 sec.
+[2] New dual bound: 1.563788e+12
+The clock time is 530.733190 sec.
+[1] New primal bound: 1.609169e+12
+The clock time is 577.118943 sec.
+[1] New dual bound: 1.563856e+12
+The clock time is 577.620893 sec.
+[0] New dual bound: 1.565043e+12
+[0] Bound updated: (1.565043e+12, 1.599413e+12), gap: 2.15%.
+The clock time is 581.265626 sec.
+[2] New primal bound: 1.620073e+12
+The clock time is 596.938895 sec.
+[2] New dual bound: 1.563842e+12
+The clock time is 597.390986 sec.
+[3] New primal bound: 1.626826e+12
+The clock time is 616.874444 sec.
+[3] New dual bound: 1.564725e+12
+The clock time is 617.162164 sec.
+[0] New dual bound: 1.565130e+12
+[0] Bound updated: (1.565130e+12, 1.599413e+12), gap: 2.14%.
+The clock time is 643.699391 sec.
+[2] New dual bound: 1.563955e+12
+The clock time is 652.685485 sec.
+[2] New dual bound: 1.563989e+12
+The clock time is 678.622048 sec.
+[2] New dual bound: 1.564061e+12
+The clock time is 716.613500 sec.
+[0] New dual bound: 1.565218e+12
+[0] Bound updated: (1.565218e+12, 1.599413e+12), gap: 2.14%.
+The clock time is 750.378900 sec.
+[0] New dual bound: 1.565241e+12
+[0] Bound updated: (1.565241e+12, 1.599413e+12), gap: 2.14%.
+The clock time is 803.085797 sec.
+[0] New primal bound: 1.585086e+12
+[0] Bound updated: (1.565241e+12, 1.585086e+12), gap: 1.25%.
+The clock time is 863.869752 sec.
+[0] New dual bound: 1.565302e+12
+[0] Bound updated: (1.565302e+12, 1.585086e+12), gap: 1.25%.
+The clock time is 864.194716 sec.
+[1] New primal bound: 1.582147e+12
+[1] Bound updated: (1.565302e+12, 1.582147e+12), gap: 1.06%.
+The clock time is 866.932324 sec.
+[1] New dual bound: 1.564071e+12
+The clock time is 876.855725 sec.
+[0] New dual bound: 1.565446e+12
+[0] Bound updated: (1.565446e+12, 1.582147e+12), gap: 1.06%.
+The clock time is 936.620650 sec.
+[3] New primal bound: 1.586144e+12
+The clock time is 983.595549 sec.
+[3] New dual bound: 1.564991e+12
+The clock time is 994.242835 sec.
+[1] New primal bound: 1.582146e+12
+[1] Bound updated: (1.565446e+12, 1.582146e+12), gap: 1.06%.
+The clock time is 996.911611 sec.
+[2] New primal bound: 1.580083e+12
+[2] Bound updated: (1.565446e+12, 1.580083e+12), gap: 0.93%.
+The clock time is 1032.672028 sec.
+Stopping criterion reached. Stopping all pending solves.
+The clock time is 1032.683924 sec.
+Job 0: 1585085744903.030762, stat 113
+	0.000000, 1.565446e+12, 1.585086e+12
+Job 1: 1582146242995.948975, stat 113
+	0.000000, 1.567872e+12, 1.582146e+12
+Job 2: 1580083129250.596191, stat 113
+	0.000000, 1.564061e+12, 1.580083e+12
+Job 3: 1586143980594.134033, stat 113
+	0.000000, 1.564991e+12, 1.586144e+12
