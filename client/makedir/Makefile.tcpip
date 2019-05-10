@@ -1,7 +1,7 @@
 # -*- mode: Makefile -*-
+IP 				= 	192.168.1.73
 
-TRANSPORT_CFLAGS	=	-DUSE_TCPIP
-TRANSPORT_LDFLAGS	=	# nothing
+TRANSPORT_CFLAGS=	-DUSE_TCPIP
 
 WORKERPID 		= 	workerpid
 WORKERPID0		=	workerpid0
@@ -27,7 +27,7 @@ else
 ifneq ($(parmipopt-port0),-1)
 	$(LDLIBPATH)=$$$(LDLIBPATH):$(CPLEXBINDIR) \
 	$(WORKER) -worker=tcpip $(parmipopt-userfunction) \
-		-address=192.168.1.73:$(parmipopt-port0) \
+		-address=$(IP):$(parmipopt-port0) \
 		-logfile=parmipopt0.srvlog -pidfile=$(WORKERPID0)	&
 	# Wait for port 9525...
 	sleep 2
@@ -36,7 +36,7 @@ endif
 ifneq ($(parmipopt-port1),-1)
 	$(LDLIBPATH)=$$$(LDLIBPATH):$(CPLEXBINDIR) \
 	$(WORKER) -worker=tcpip $(parmipopt-userfunction) \
-		-address=192.168.1.73:$(parmipopt-port1) \
+		-address=$(IP):$(parmipopt-port1) \
 		-logfile=parmipopt1.srvlog -pidfile=$(WORKERPID1)	&
 	# Wait for port 9526...
 	sleep 2
@@ -45,7 +45,7 @@ endif
 ifneq ($(parmipopt-port2),-1)
 	$(LDLIBPATH)=$$$(LDLIBPATH):$(CPLEXBINDIR) \
 	$(WORKER) -worker=tcpip $(parmipopt-userfunction) \
-		-address=192.168.1.73:$(parmipopt-port2) \
+		-address=$(IP):$(parmipopt-port2) \
 		-logfile=parmipopt2.srvlog -pidfile=$(WORKERPID2)	&
 	# Wait for port 9527...
 	sleep 2
@@ -54,7 +54,7 @@ endif
 ifneq ($(parmipopt-port3),-1)
 	$(LDLIBPATH)=$$$(LDLIBPATH):$(CPLEXBINDIR) \
 	$(WORKER) -worker=tcpip $(parmipopt-userfunction) \
-		-address=192.168.1.73:$(parmipopt-port3) \
+		-address=$(IP):$(parmipopt-port3) \
 		-logfile=parmipopt3.srvlog -pidfile=$(WORKERPID3)	&
 	# Wait for port 9528...
 	sleep 2
